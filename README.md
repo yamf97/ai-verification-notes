@@ -15,7 +15,9 @@ AI가 학술 자료를 읽고 요약하고 설명할 때, **그 말이 원문에
 
 전체 원칙: [principles.md](principles.md)
 
-## 사례
+코드 쪽에서 같은 문제를 다루는 방식(지시서, 시험 먼저, 구현하는 AI와 검토하는 AI 분리, 사람 없이 돌릴 때의 멈춤 규칙): [process.md](process.md)
+
+## 사례 (10편)
 
 모든 사례는 같은 틀로 썼습니다: **무슨 일이 있었나 → 어떻게 확인했나 → 만든 규칙 → 그 뒤 → 이 사례의 한계**
 
@@ -30,6 +32,7 @@ AI가 학술 자료를 읽고 요약하고 설명할 때, **그 말이 원문에
 | 07 | [인젝션 판정기가 한 번도 통과시키지 않았던 이유](cases/07-injection-judge-category-error.md) | 원인은 성립하지 않는 판정 질문. 고친 뒤 정상 0.00 / 공격 1.00 / 보안 주제 0.00 |
 | 08 | [모든 좌표가 기대는 공식은 직접 한 번 확인한다](cases/08-page-offset.md) | 쪽 번호 변환 공식이 틀린 채 노트 3개 장 |
 | 09 | [교재 없는 강의: 판서와 자막이 서로를 검사한다](cases/09-board-and-subtitles.md) | 자막 오인식, 강사 말실수 4건, 둘이 함께 틀린 곳까지 잡음. 심각 지적 3건이 점검 도구 자체의 결함 |
+| 10 | [문헌 검색도 검증한다: 정하기 전에 재고, 켜기 전에 사람이 본다](cases/10-discovery-measured.md) | 10건 표본의 "DOI 없음" → 100건에선 47%. 자동 연결 44건 사람 전수 확인 후 오연결 0. 필드 하나 차이로 서평 0건 → 20건 |
 
 ## 교육 자료에 옮길 때 달라지는 점
 
@@ -54,6 +57,6 @@ AI가 학술 자료를 읽고 요약하고 설명할 때, **그 말이 원문에
 
 ---
 
-**In English.** Case notes on keeping AI-generated summaries and explanations grounded in the source text. They come from tools I built for my own research and study. Each case runs: what happened → how it was checked → the rule I made → what changed → limits. Main findings: model self-confidence can't gate verification (19.2% of "high-confidence" claims were unsupported). Claims must be decomposed by code, not by the model (67–73% of seeded errors were never examined). A verifier's "not found" rate is not a hallucination rate (83.7% were actually in the source). Differences below the measured run-to-run noise (±2 pp) are not reported. Retrieved content is treated as data, never as instructions. The same principles carry over to textbooks, lecture videos, and student Q&A boards.
+**In English.** Case notes on keeping AI-generated summaries and explanations grounded in the source text. They come from tools I built for my own research and study. Each case runs: what happened → how it was checked → the rule I made → what changed → limits. Main findings: model self-confidence can't gate verification (19.2% of "high-confidence" claims were unsupported). Claims must be decomposed by code, not by the model (67–73% of seeded errors were never examined). A verifier's "not found" rate is not a hallucination rate (83.7% were actually in the source). Differences below the measured run-to-run noise (±2 pp) are not reported. Retrieved content is treated as data, never as instructions. The same principles carry over to textbooks, lecture videos, and student Q&A boards. A companion note (process.md) describes the development side: written specs before code, tests first, separate implementer and reviewer models, and hard stop rules for unattended AI agents.
 
 License: text under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
