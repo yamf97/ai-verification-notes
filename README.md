@@ -56,7 +56,7 @@ AI가 학술 자료를 읽고 요약하고 설명할 때, **할루시네이션(�
 
 ## 관련 저장소
 
-- [lecture-note-bench](https://github.com/yamf97/lecture-note-bench): 강의 자막으로 노트를 만들 때 오픈 웨이트 모델 5개를 블라인드로 비교한 실험과, 인용을 자막과 대조하는 검사기. 노트 작성 규칙은 그 저장소의 METHOD.md에 있습니다.
+- [lecture-note-bench](https://github.com/yamf97/lecture-note-bench): 강의 영상으로 근거를 지키는 노트를 만드는 도구(자막 받기, 로컬 전사, 읽기본, 판서 장면 뽑기, 인용·시각·계산을 원문과 대조하는 검사기)와, 오픈 웨이트 모델 5개를 블라인드로 비교한 실험. 노트 작성 규칙은 그 저장소의 METHOD.md에 있습니다.
 
 ## 이 기록에 대해
 
